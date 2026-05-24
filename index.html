@@ -4,16 +4,16 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ครุภัณฑ์ทางการแพทย์</title>
-  <link rel="manifest" href="/medical-dashboard/manifest.json">
+  <link rel="manifest" href="manifest.json">
   <link rel="icon" type="image/png" href="icons/icon-192.png">
   <link rel="apple-touch-icon" href="icons/icon-512.png">
   <meta name="theme-color" content="#0B1220">
   <meta name="mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta http-equiv="refresh" content="0;url=https://gemini.google.com/share/2646487b0a55">
   <style>
-    * { box-sizing: border-box; }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
     body {
-      margin: 0;
       min-height: 100vh;
       font-family: Arial, sans-serif;
       background: linear-gradient(135deg, #07111f, #0b1220, #1c2b3d);
@@ -28,7 +28,6 @@
       padding: 28px;
       border-radius: 28px;
       background: rgba(255,255,255,0.08);
-      box-shadow: 0 20px 60px rgba(0,0,0,0.35);
       border: 1px solid rgba(255,215,130,0.35);
     }
     img {
@@ -37,36 +36,31 @@
       border-radius: 36px;
       object-fit: cover;
     }
-    h1 { margin: 22px 0 8px; font-size: 28px; }
-    p { margin: 0; opacity: 0.85; line-height: 1.6; }
-    .button {
+    h1 { margin: 22px 0 8px; font-size: 26px; }
+    p { opacity: 0.85; line-height: 1.6; margin-bottom: 20px; }
+    a.button {
       display: inline-block;
-      margin-top: 22px;
       padding: 14px 28px;
       border-radius: 999px;
       background: linear-gradient(135deg, #f6c867, #c9922d);
       color: #0b1220;
       font-weight: bold;
       font-size: 16px;
-      border: none;
-      cursor: pointer;
+      text-decoration: none;
     }
-    .button:active { opacity: 0.85; }
   </style>
 </head>
 <body>
   <main class="card">
     <img src="icons/icon-512.png" alt="ครุภัณฑ์ทางการแพทย์">
     <h1>ครุภัณฑ์ทางการแพทย์</h1>
-    <p>เว็บแอปสำหรับเปิดใช้งานบนมือถือ<br>ผ่านไอคอนหน้า Home Screen</p>
-    <button class="button"
-      onclick="window.open(
-        'https://gemini.google.com/share/2646487b0a55',
-        '_blank',
-        'noopener,noreferrer'
-      )">
+    <p>กำลังเปิด Dashboard...</p>
+    <a class="button"
+       href="https://gemini.google.com/share/2646487b0a55"
+       target="_blank"
+       rel="noopener noreferrer">
       เปิด Dashboard
-    </button>
+    </a>
   </main>
 </body>
 </html>
