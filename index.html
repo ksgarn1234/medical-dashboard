@@ -3,15 +3,20 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>ครุภัณฑ์ทางการแพทย์</title>
+
   <link rel="manifest" href="manifest.json">
   <link rel="icon" type="image/png" href="icons/icon-192.png">
   <link rel="apple-touch-icon" href="icons/icon-512.png">
+
   <meta name="theme-color" content="#0B1220">
   <meta name="mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-capable" content="yes">
+
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
+
     body {
       min-height: 100vh;
       font-family: Arial, sans-serif;
@@ -21,24 +26,41 @@
       align-items: center;
       justify-content: center;
       text-align: center;
+      padding: 20px;
     }
+
     .card {
       width: min(90vw, 420px);
       padding: 28px;
       border-radius: 28px;
       background: rgba(255,255,255,0.08);
       border: 1px solid rgba(255,215,130,0.35);
+      box-shadow: 0 20px 60px rgba(0,0,0,0.35);
     }
+
     img {
       width: 180px;
       height: 180px;
       border-radius: 36px;
       object-fit: cover;
+      box-shadow: 0 12px 40px rgba(255,190,80,0.28);
     }
-    h1 { margin: 22px 0 8px; font-size: 26px; }
-    p { opacity: 0.85; line-height: 1.6; margin-bottom: 20px; }
+
+    h1 {
+      margin: 22px 0 8px;
+      font-size: 26px;
+    }
+
+    p {
+      opacity: 0.85;
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+
     .button {
       display: inline-block;
+      width: 100%;
+      max-width: 280px;
       padding: 14px 28px;
       border-radius: 999px;
       background: linear-gradient(135deg, #f6c867, #c9922d);
@@ -48,20 +70,56 @@
       text-decoration: none;
       border: none;
       cursor: pointer;
+      margin: 6px 0;
+    }
+
+    .secondary {
+      background: rgba(255,255,255,0.12);
+      color: white;
+      border: 1px solid rgba(255,255,255,0.22);
+    }
+
+    .hint {
+      font-size: 13px;
+      opacity: 0.7;
+      margin-top: 12px;
+      margin-bottom: 0;
     }
   </style>
 </head>
+
 <body>
   <main class="card">
     <img src="icons/icon-512.png" alt="ครุภัณฑ์ทางการแพทย์">
+
     <h1>ครุภัณฑ์ทางการแพทย์</h1>
+
     <p>กดปุ่มด้านล่างเพื่อเปิด Dashboard</p>
-    <a class="button"
+
+    <button class="button" onclick="openDashboard()">
+      เปิด Dashboard
+    </button>
+
+    <a class="button secondary"
        href="https://gemini.google.com/share/2646487b0a55"
        target="_blank"
        rel="noopener noreferrer">
-      เปิด Dashboard
+      เปิดสำรองผ่าน Browser
     </a>
+
+    <p class="hint">หากปุ่มแรกไม่เปิด ให้ใช้ปุ่มสำรองด้านล่าง</p>
   </main>
+
+  <script>
+    function openDashboard() {
+      const url = "https://gemini.google.com/share/2646487b0a55";
+
+      const newWindow = window.open(url, "_blank", "noopener,noreferrer");
+
+      if (!newWindow) {
+        window.location.href = url;
+      }
+    }
+  </script>
 </body>
 </html>
