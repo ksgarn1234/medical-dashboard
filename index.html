@@ -3,17 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <title>ครุภัณฑ์ทางการแพทย์</title>
-
-  <link rel="manifest" href="manifest.json">
+  <link rel="manifest" href="/medical-dashboard/manifest.json">
   <link rel="icon" type="image/png" href="icons/icon-192.png">
   <link rel="apple-touch-icon" href="icons/icon-512.png">
-
   <meta name="theme-color" content="#0B1220">
-  <meta name="background-color" content="#0B1220">
-
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
   <style>
+    * { box-sizing: border-box; }
     body {
       margin: 0;
       min-height: 100vh;
@@ -38,37 +36,37 @@
       height: 180px;
       border-radius: 36px;
       object-fit: cover;
-      box-shadow: 0 12px 40px rgba(255,190,80,0.28);
     }
-    h1 {
-      margin: 22px 0 8px;
-      font-size: 28px;
-    }
-    p {
-      margin: 0;
-      opacity: 0.85;
-      line-height: 1.6;
-    }
-    a.button {
+    h1 { margin: 22px 0 8px; font-size: 28px; }
+    p { margin: 0; opacity: 0.85; line-height: 1.6; }
+    .button {
       display: inline-block;
       margin-top: 22px;
-      padding: 12px 20px;
+      padding: 14px 28px;
       border-radius: 999px;
       background: linear-gradient(135deg, #f6c867, #c9922d);
       color: #0b1220;
-      text-decoration: none;
       font-weight: bold;
+      font-size: 16px;
+      border: none;
+      cursor: pointer;
     }
+    .button:active { opacity: 0.85; }
   </style>
 </head>
 <body>
   <main class="card">
     <img src="icons/icon-512.png" alt="ครุภัณฑ์ทางการแพทย์">
     <h1>ครุภัณฑ์ทางการแพทย์</h1>
-    <p>เว็บแอปสำหรับเปิดใช้งานบนมือถือผ่านไอคอนหน้า Home Screen</p>
-
-    <!-- เปลี่ยนลิงก์ด้านล่างนี้เป็นลิงก์ Dashboard / Gemini / เว็บจริงของพี่ -->
-   <a class="button" href="https://gemini.google.com/share/2646487b0a55" target="_blank" rel="noopener noreferrer">เปิด Dashboard</a>
+    <p>เว็บแอปสำหรับเปิดใช้งานบนมือถือ<br>ผ่านไอคอนหน้า Home Screen</p>
+    <button class="button"
+      onclick="window.open(
+        'https://gemini.google.com/share/2646487b0a55',
+        '_blank',
+        'noopener,noreferrer'
+      )">
+      เปิด Dashboard
+    </button>
   </main>
 </body>
 </html>
